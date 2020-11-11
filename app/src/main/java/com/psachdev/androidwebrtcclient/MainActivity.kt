@@ -79,16 +79,22 @@ class MainActivity : AppCompatActivity() {
         val localAudioTrack = getLocalAudioTrack(peerConnectionFactory)
         val localVideoTrack = getLocalVideoTrack(peerConnectionFactory, videoCapturerAndroid)
         videoCapturerAndroid.startCapture(1000, 1000, 30)
+        initializeVideoView()
+        localVideoTrack.addRenderer(VideoRenderer(videoView))
+    }
 
+    private fun initializeVideoView(){
         rootEglBase = EglBase.create()
         videoView.init(rootEglBase.eglBaseContext, null)
         videoView.visibility = View.VISIBLE
         videoView.setMirror(true)
-        localVideoTrack.addRenderer(VideoRenderer(videoView))
     }
+
     private fun initializePeerConnectionFactory(): PeerConnectionFactory{
         PeerConnectionFactory.initializeAndroidGlobals(this, true)
         val options = PeerConnectionFactory.Options()
+        options.disableEncryption = false
+        options.disableNetworkMonitor = false
         return PeerConnectionFactory(options)
     }
 

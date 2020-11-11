@@ -1,0 +1,3 @@
+include ':libwebrtc'
+include ':app'
+rootProject.name = "AndroidWebrtcClient"

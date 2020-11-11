@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidWebrtcClient</string>
+    <string name="invalid_permission_callback">Invalid</string>
+    <string name="camera_permission_required">Camera permssion required</string>
+</resources>

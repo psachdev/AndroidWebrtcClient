@@ -2,8 +2,8 @@ package com.psachdev.androidwebrtcclient
 
 import org.webrtc.*
 
-class WebrtcPeerConnectionObserver: PeerConnection.Observer {
-    private val TAG = WebrtcClientSdpObserver::class.qualifiedName
+open class WebrtcPeerConnectionObserver(private val externalTag: String): PeerConnection.Observer {
+    private val TAG = WebrtcClientSdpObserver::class.qualifiedName.plus(externalTag)
 
     override fun onSignalingChange(p0: PeerConnection.SignalingState?) {
         info(message = "onSignalingChange", tag = TAG)

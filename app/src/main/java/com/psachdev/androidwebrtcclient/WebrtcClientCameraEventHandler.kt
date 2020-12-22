@@ -3,29 +3,29 @@ package com.psachdev.androidwebrtcclient
 import org.webrtc.CameraVideoCapturer
 
 class WebrtcClientCameraEventHandler : CameraVideoCapturer.CameraEventsHandler {
-    private val TAG = WebrtcClientSdpObserver::class.qualifiedName
+    private val loggerTag = WebrtcClientSdpObserver::class.qualifiedName
 
     override fun onCameraError(p0: String?) {
-        info(message = "onCameraError", tag = TAG)
+        info(message = "onCameraError", tag = loggerTag)
     }
 
     override fun onCameraDisconnected() {
-        info(message = "onCameraDisconnected", tag = TAG)
+        info(message = "onCameraDisconnected", tag = loggerTag)
     }
 
     override fun onCameraFreezed(p0: String?) {
-        info(message = "onCameraFreezed", tag = TAG)
+        info(message = "onCameraFreezed", tag = loggerTag)
     }
 
     override fun onCameraOpening(p0: String?) {
-        info(message = "onCameraOpening", tag = TAG)
+        info(message = "onCameraOpening", tag = loggerTag)
     }
 
     override fun onFirstFrameAvailable() {
-        info(message = "onFirstFrameAvailable", tag = TAG)
+        info(message = "onFirstFrameAvailable", tag = loggerTag)
     }
 
     override fun onCameraClosed() {
-        info(message = "onCameraClosed", tag = TAG)
+        info(message = "onCameraClosed", tag = loggerTag)
     }
 }

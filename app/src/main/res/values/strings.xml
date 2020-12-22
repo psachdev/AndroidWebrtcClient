@@ -2,4 +2,7 @@
     <string name="app_name">AndroidWebrtcClient</string>
     <string name="invalid_permission_callback">Invalid</string>
     <string name="camera_permission_required">Camera permssion required</string>
+    <string name="start_button">Start</string>
+    <string name="call_button">Call</string>
+    <string name="hangup_button">Hangup</string>
 </resources>
